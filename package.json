@@ -1,0 +1,47 @@
+{
+  "name": "start-es6",
+  "version": "0.0.0",
+  "description": "Getting started with es6 : browser and server side",
+  "main": "index.js",
+  "scripts": {
+    "start": "browser-sync start --config bs-config.js",
+    "gulp": "gulp",
+    "webpack": "webpack-dev-server --content-base ./ --open"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Zacaria/start-es6.git"
+  },
+  "keywords": [
+    "es6",
+    "babel",
+    "server",
+    "browser"
+  ],
+  "author": "Zacaria",
+  "license": "Apache-2.0",
+  "bugs": {
+    "url": "https://github.com/Zacaria/start-es6/issues"
+  },
+  "homepage": "https://github.com/Zacaria/start-es6#readme",
+  "devDependencies": {
+    "babel-cli": "^6.18.0",
+    "babel-loader": "^6.2.10",
+    "babel-preset-es2015": "^6.18.0",
+    "babel-preset-stage-2": "^6.18.0",
+    "babelify": "^7.3.0",
+    "browser-sync": "^2.18.5",
+    "browserify": "^13.1.1",
+    "del": "^2.2.2",
+    "gulp": "^3.9.1",
+    "gulp-babel": "^6.1.2",
+    "gulp-concat": "^2.6.1",
+    "gulp-plumber": "^1.1.0",
+    "gulp-util": "^3.0.8",
+    "vinyl-buffer": "^1.0.0",
+    "vinyl-source-stream": "^1.1.0",
+    "watchify": "^3.8.0",
+    "webpack": "^1.14.0",
+    "webpack-dev-server": "^1.16.2"
+  }
+}

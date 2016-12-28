@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Start Es6</title>
+
+    <!--Styles from pure.css -->
+    <link rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.2.3/css/bulma.min.css">
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.9.0/styles/default.min.css">
+
+    <style>
+        .hide {
+            display: none;
+        }
+    </style>
+</head>
+<body>
+<section class="section">
+    <div class="container">
+        <h1 class="title">es6 how to use examples</h1>
+        <div class="tile is-ancestor">
+            <div class="tile is-parent">
+                <div class="tile is-child notification browser">
+                    <div class="content">
+                        <h2 class="title">
+                            Es6 supported by this browser
+                        </h2>
+                        <pre>
+                            <code class="javascript">
+(function supportsES6() {
+    try {
+        new Function("(a = 0) => a");
+        document.querySelector('.browser').classList.add('is-success')
+    }
+    catch (err) {
+        document.querySelector('.browser').classList.add('is-danger')
+    }
+})();
+                            </code>
+                        </pre>
+                    </div>
+                </div>
+            </div>
+            <div class="tile is-parent is-vertical">
+                <div class="tile is-child notification gulp">
+                    <div class="content">
+                        <h2 class="title">
+                            Es6 compiled with babel + gulp + browserify
+                        </h2>
+                        <div class="imported">Imported value from other.js : </div>
+                        <pre>
+                            <code class="javascript">
+// index.js
+import {someValue} from './other';
+
+const es6Func = (param = '') => {
+  document.querySelector('.gulp').classList.add('is-success');
+  document.querySelector('.gulp .imported').innerText += ' ' + param;
+};
+
+es6Func(someValue);
+
+//other.js
+export const someValue = 'foobar';
+                            </code>
+                        </pre>
+                    </div>
+                </div>
+                <div class="tile is-child notification webpack">
+                    <div class="content">
+                        <h2 class="title">
+                            Es6 compiled with babel + webpack
+                        </h2>
+                        <div class="imported">Imported value from other.js : </div>
+                        <pre>
+                            <code class="javascript">
+// index.js
+import {someValue} from './other';
+
+const es6Func = (param = '') => {
+  document.querySelector('.webpack').classList.add('is-success');
+  document.querySelector('.webpack .imported').innerText += ' ' + param;
+};
+
+es6Func(someValue);
+
+//other.js
+export const someValue = 'foobar';
+                            </code>
+                        </pre>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.9.0/highlight.min.js"></script>
+<script type="text/javascript">
+
+    hljs.initHighlightingOnLoad();
+
+    // Changes the color of the div browser if the es6 is supported
+    (function supportsES6() {
+        try {
+            new Function("(a = 0) => a");
+            document.querySelector('.browser').classList.add('is-success')
+        }
+        catch (err) {
+            document.querySelector('.browser').classList.add('is-danger')
+        }
+    })();
+
+</script>
+<script type="text/javascript" src="build/gulp-bundle.js"></script>
+<script type="text/javascript" src="webpack-bundle.js"></script>
+</body>
+</html>
