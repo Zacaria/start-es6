@@ -1,6 +1,6 @@
 {
   "name": "start-es6",
-  "version": "0.0.0",
+  "version": "0.1.0",
   "description": "Getting started with es6 : browser and server side",
   "main": "index.js",
   "scripts": {
