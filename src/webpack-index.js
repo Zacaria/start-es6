@@ -1,5 +1,5 @@
 /**
- * The import example leverages the need of browserify
+ * The import example leverages the need of a bundler
  * This is also applicable to require problems
  */
 import {someValue} from './other';
